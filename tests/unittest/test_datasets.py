@@ -30,11 +30,7 @@ import numpy as np
 import pytest
 
 import gluonnlp as nlp
-
-try:
-    _str_types = (str, unicode)
-except NameError:  # Python 3
-    _str_types = (str, )
+from gluonnlp.base import _str_types
 
 
 ###############################################################################

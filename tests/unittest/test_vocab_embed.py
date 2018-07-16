@@ -28,14 +28,10 @@ import functools
 import pytest
 
 import gluonnlp as nlp
+from gluonnlp.base import _str_types
 from mxnet import ndarray as nd
 from mxnet.test_utils import *
 import numpy as np
-
-if sys.version_info[0] == 3:
-    _str_types = (str, )
-else:
-    _str_types = (str, unicode)
 
 
 def _get_test_str_of_tokens(token_delim, seq_delim):
