@@ -18,7 +18,7 @@
 ROOTDIR = $(CURDIR)
 
 lint:
-	pylint --rcfile=$(ROOTDIR)/.pylintrc gluonnlp scripts/*/*.py && python setup.py check --restructuredtext --strict && flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
+	flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
 
 docs: release
 	make -C docs html SPHINXOPTS=-W
